@@ -1,11 +1,11 @@
 import React from 'react';
 
 export const Homepage = () => (
-	<main className='flex flex-wrap items-center justify-center min-h-screen md:text-4xl sm:text-xl'>
+	<main className='flex flex-wrap items-center justify-center min-h-screen lg:text-7xl md:text-5xl sm:text-xl'>
 		<div className='font-sans font-bold text-ruby'>
 			<div className='pb-5'>
 				<p>
-					Visual <span className='font-light'>&</span> Interaction Designer
+					Visual <span className='font-light'>&</span> Interaction Design
 				</p>
 			</div>
 			<div className='font-light'>
