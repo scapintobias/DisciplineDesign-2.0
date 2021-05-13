@@ -9,6 +9,7 @@ export const ProjectFilters = (props) => {
 	useEffect(() => {
 		window.sessionStorage.setItem('currentType', props.type || '');
 	});
+
 	return (
 		<>
 			<div className='box-border fixed z-20 flex items-center w-full py-4 overflow-x-scroll bg-white border-b mt-14'>

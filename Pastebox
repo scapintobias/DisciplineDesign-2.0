@@ -14,3 +14,14 @@
 			// => @media (min-width: 1536px) { ... }
 		},
 
+
+		ux: 'bg-orange-400',
+		wayfinding: 'bg-red-200',
+		event: 'bg-emerald-300',
+		corporate: 'bg-ruby',
+		logo: 'bg-yellow-800',
+		poster: 'bg-bluegray-800',
+		video: 'bg-gray-400',
+		exhibit: 'bg-red-800',
+		photography: 'bg-black text-white',
+		print: 'bg-green text-white',

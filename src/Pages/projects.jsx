@@ -8,7 +8,7 @@ export function Projects({ match }) {
 	return (
 		<section>
 			<ProjectFilters type={type} />
-			<div className='grid grid-cols-1 gap-4 m-4 t:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7'>
+			<div className='grid grid-cols-1 m-8 gap-7 t:grid-cols-2 md:grid-cols-2 l:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7'>
 				<ProjectList type={type} />
 			</div>
 		</section>
