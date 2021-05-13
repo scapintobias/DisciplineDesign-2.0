@@ -58,7 +58,7 @@ export const projectTypes = {
 	ux: 'UX/UI',
 	wayfinding: 'Wayfinding',
 	event: 'Events',
-	corporate: 'Corporate Image',
+	corporate: 'Branding',
 	logo: 'Logo',
 	poster: 'Posters',
 	video: 'Video',
