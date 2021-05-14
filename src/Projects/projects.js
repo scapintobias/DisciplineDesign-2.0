@@ -1,9 +1,6 @@
 import {
 	Pantone,
 	Craf,
-	Abstract,
-	A,
-	Hospital,
 	Richmond,
 	Dp,
 	Manin,
