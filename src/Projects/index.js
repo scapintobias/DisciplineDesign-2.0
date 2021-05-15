@@ -87,3 +87,45 @@ export const colorTypes = {
 	print:
 		'px-3 py-2 text-xs font-semibold leading-none tracking-wide uppercase rounded-full max-w-min bg-green-600 text-white',
 };
+
+export const colorBubbles = {
+	ux: 'px-4 py-4 text-xs font-semibold leading-none tracking-wide uppercase rounded-full max-w-min bg-orange-400 shadow-2xl',
+	wayfinding:
+		'px-4 py-4 text-xs font-semibold leading-none tracking-wide uppercase rounded-full max-w-min bg-red-200 shadow-2xl',
+	event:
+		'px-4 py-4 text-xs font-semibold leading-none tracking-wide uppercase rounded-full max-w-min bg-emerald-700 text-white shadow-2xl',
+	corporate:
+		'px-4 py-4 text-xs font-semibold leading-none tracking-wide uppercase rounded-full max-w-min bg-ruby text-white shadow-2xl',
+	logo: 'px-4 py-4 text-xs font-semibold leading-none tracking-wide uppercase rounded-full max-w-min bg-yellow-300 shadow-2xl',
+	poster:
+		'px-4 py-4 text-xs font-semibold leading-none tracking-wide uppercase rounded-full max-w-min bg-blueGray-600 text-white shadow-2xl',
+	video:
+		'px-4 py-4 text-xs font-semibold leading-none tracking-wide uppercase rounded-full max-w-min bg-gray-400 shadow-2xl',
+	exhibit:
+		'px-4 py-4 text-xs font-semibold leading-none tracking-wide uppercase rounded-full max-w-min bg-red-800 text-white shadow-2xl',
+	photography:
+		'px-4 py-4 text-xs font-semibold leading-none tracking-wide uppercase rounded-full max-w-min bg-blueGray-200 shadow-2xl',
+	print:
+		'px-4 py-4 text-xs font-semibold leading-none tracking-wide uppercase rounded-full max-w-min bg-green-600 text-white shadow-2xl',
+};
+
+export const bgTypes = {
+	ux: 'w-full h-full bg-orange-300 text-orange-800 text-2xl font-bold uppercase text-center h-80  flex justify-center items-center rounded-md',
+	wayfinding:
+		'w-full h-full bg-red-300 text-red-800 text-2xl font-bold uppercase text-center h-80  flex justify-center items-center rounded-md',
+	event:
+		'w-full h-full bg-emerald-300 text-emerald-800 text-2xl font-bold uppercase text-center h-80  flex justify-center items-center rounded-md',
+	corporate:
+		'w-full h-full bg-blue-300 text-blue-800 text-2xl font-bold uppercase text-center h-80 flex justify-center items-center rounded-md',
+	logo: 'w-full h-full bg-yellow-100 text-yellow-800 text-2xl font-bold uppercase text-center h-80 flex justify-center items-center rounded-md',
+	poster:
+		'w-full h-full bg-blueGray-300 text-blueGray-800 text-2xl font-bold uppercase text-center h-80 flex justify-center items-center rounded-md',
+	video:
+		'w-full h-full bg-gray-300 text-gray-800 text-2xl font-bold uppercase text-center h-80  flex justify-center items-center rounded-md',
+	exhibit:
+		'w-full h-full bg-red-800 text-white text-2xl font-bold uppercase text-center h-80  flex justify-center items-center rounded-md',
+	photography:
+		'w-full h-full bg-blueGray-200 text-2xl font-bold uppercase text-center h-80  flex justify-center items-center rounded-md',
+	print:
+		'w-full h-full bg-green-600 text-white text-2xl font-bold uppercase text-center h-80  flex justify-center items-center rounded-md',
+};

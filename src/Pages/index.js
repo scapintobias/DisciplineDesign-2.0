@@ -3,6 +3,7 @@
 //export * from './contacts';
 export * from './homepage';
 export * from './project';
-export * from './projects';
-//export * from './resources';
+export * from './resources';
+export * from './work';
+
 //export * from './about';
