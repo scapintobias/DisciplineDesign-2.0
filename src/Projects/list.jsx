@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { slugify } from './utils';
 
-import { getAllProjects, projectTypes, colorBubbles, bgTypes } from './index';
+import { getAllProjects, projectTypes, colorBubbles } from './index';
 
 const projects = getAllProjects();
 
@@ -28,6 +28,7 @@ export const ProjectList = (props) => {
 									project.year
 								}/${slugify(project.title)}`}
 								target='_blank'
+								rel='noopener noreferrer'
 								href={
 									baseTwitter +
 									tweet +
@@ -35,7 +36,6 @@ export const ProjectList = (props) => {
 										project.year
 									}/${slugify(project.title)}`
 								}
-								rel='noreferrer'
 							>
 								<svg
 									version='1.1'
@@ -57,8 +57,7 @@ export const ProjectList = (props) => {
 							</a>
 						</div>
 						<Link
-							className=''
-							key={key}
+							key={project.title}
 							to={`/work/${slugify(project.type)}/${project.year}/${slugify(
 								project.title
 							)}`}

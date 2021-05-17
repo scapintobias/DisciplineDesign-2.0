@@ -105,7 +105,7 @@ export const Rf = ({ link, rf }) => (
 );
 export const Iltr = ({ img, children }) => (
 	<section className='flex flex-col space-x-4 t:flex-row'>
-		<div className='w-7/12 w-full'>
+		<div className='w-7/12'>
 			<img src={img} alt='alt' className='w-full' />
 		</div>
 		<div className='sticky t:w-5/12 sm:w-full'>
