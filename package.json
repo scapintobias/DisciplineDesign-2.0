@@ -3,21 +3,19 @@
 	"version": "2.0",
 	"private": true,
 	"dependencies": {
-		"@craco/craco": "^5.9.0",
+		"@craco/craco": "^6.1.2",
 		"@headlessui/react": "^1.2.0",
 		"@testing-library/jest-dom": "^5.12.0",
 		"@testing-library/react": "^11.2.6",
 		"@testing-library/user-event": "^12.8.3",
 		"classnames": "^2.3.1",
-		"fsevents": "^2.3.2",
-		"node-sass": "^6.0.0",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
-		"react-router": "^5.2.0",
 		"react-router-dom": "^5.2.0",
-		"react-scripts": "^2.1.8",
+		"react-scripts": "4.0.3",
 		"slugify": "^1.5.3",
-		"web-vitals": "^1.1.1"
+		"web-vitals": "^1.1.1",
+		"react-spring": "^9.1.2"
 	},
 	"scripts": {
 		"start": "craco start",
@@ -44,7 +42,8 @@
 		]
 	},
 	"devDependencies": {
-		"postcss": "^8.2.15",
+		"autoprefixer": "^9.8.6",
+		"postcss": "^7.0.35",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
 	}
 }
