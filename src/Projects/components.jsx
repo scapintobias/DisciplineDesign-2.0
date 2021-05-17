@@ -8,23 +8,18 @@ import CN from 'classnames';
 // 	AccordionItemPanel,
 // } from 'react-accessible-accordion';
 
-export const Main = ({ children }) => <main className='ma33'>{children}</main>;
+export const Main = ({ children }) => (
+	<main className='flex flex-col mx-6 mt-48 mb-6'>{children}</main>
+);
 
 export const Par = ({ className, children }) => (
-	<section className='flex justify-center flex-column-l flex-column-t flex-column-m mv3'>
-		<section
-			className={CN(
-				'w-50 w-100-m w-100-l w-100-t f27 f3-m minion lh-copy',
-				className
-			)}
-		>
-			{children}
-		</section>
+	<section className='flex justify-center my-3 flex-column md:flex-row'>
+		<section className={CN(' w-full md:w-2/4', className)}>{children}</section>
 	</section>
 );
 
 export const Sec = ({ title, subtitle }) => (
-	<div className='silver helvetica f1 fw7 tracked pt4 pb3 lh-title'>
+	<div className='py-4 text-4xl font-bold text-warmGray-500'>
 		{title}
 		<br></br>
 		{subtitle}
@@ -32,34 +27,34 @@ export const Sec = ({ title, subtitle }) => (
 );
 
 export const Sub = ({ title }) => (
-	<div className='silver helvetica f25 fw6 pt4 pb3 lh-title'>{title}</div>
+	<div className='text-blueGray-200'>{title}</div>
 );
 
 export const ParImg = ({ oneimg, className }) => (
-	<div className={CN('mv3', className)}>
-		<img src={oneimg} alt='img' className='w-100' />
+	<div className={CN('my-3', className)}>
+		<img src={oneimg} alt='img' className='w-full' />
 	</div>
 );
 
 export const Img = ({ oneimg, className }) => (
-	<div className={CN('db', className)}>
-		<img src={oneimg} alt='img' className='w-100' />
+	<div className={CN(' block', className)}>
+		<img src={oneimg} alt='img' className='w-full' />
 	</div>
 );
 
 export const Pic = ({ img, className, imgClass }) => (
 	<div className={CN(className)}>
-		<img src={img} alt='img' className={CN('w-100', imgClass)}></img>
+		<img src={img} alt='img' className={CN('w-full', imgClass)}></img>
 	</div>
 );
 
 export const TwoImg = ({ image1, image2, className, classNamee }) => (
 	<div className='flex flex-row justify-center overflow-visible flex-column-m'>
-		<div className='pr0-m pb3-m w-100-m pr3 w-50'>
-			<img src={image1} alt='img' className='w-100'></img>
+		<div className='pr0-m pb3-m sm:w-full pr3 w-50'>
+			<img src={image1} alt='img' className='w-full'></img>
 		</div>
-		<div className='pl2 pl0-m w-100-m w-50'>
-			<img src={image2} alt='img' className='w-100'></img>
+		<div className='pl2 pl0-m sm:w-full w-50'>
+			<img src={image2} alt='img' className='w-full'></img>
 		</div>
 	</div>
 );
@@ -73,10 +68,22 @@ export const GridImg = ({ image1, image2, className, classNamee }) => (
 
 export const FourImg = ({ image1, image2, image3, image4 }) => (
 	<div className='flex flex-row justify-center flex-column-m ph35 pt3 ph3-m'>
-		<img src={image1} alt='img' className='pr0-m pb3-m w-100-m pr1 w-25'></img>
-		<img src={image2} alt='img' className='ph1 ph0-m pb3-m w-100-m w-25'></img>
-		<img src={image3} alt='img' className='ph0-m pb3-m w-100-m ph1 w-25'></img>
-		<img src={image4} alt='img' className='pl1 pl0-m w-100-m w-25'></img>
+		<img
+			src={image1}
+			alt='img'
+			className='pr0-m pb3-m sm:w-full pr1 w-25'
+		></img>
+		<img
+			src={image2}
+			alt='img'
+			className='ph1 ph0-m pb3-m sm:w-full w-25'
+		></img>
+		<img
+			src={image3}
+			alt='img'
+			className='ph0-m pb3-m sm:w-full ph1 w-25'
+		></img>
+		<img src={image4} alt='img' className='pl1 pl0-m sm:w-full w-25'></img>
 	</div>
 );
 
@@ -85,25 +92,23 @@ export const ImgRid = ({ children }) => (
 );
 
 export const Head = ({ head }) => (
-	<p className='f5 ph3 ph0-m pt3 minion silver lh-copy'>{head}</p>
+	<p className='text-sm text-warmGray-400'>{head}</p>
 );
 export const Tit = ({ tit }) => (
-	<p className='f2 fw5 pa3 ph0-m helvetica silver lh-title'>{tit}</p>
+	<p className='py-3 text-2xl font-medium text-warmGray-500'>{tit}</p>
 );
-export const P = ({ children }) => (
-	<p className='f3 ph3 ph0-m pb3 minion silver lh-copy'>{children}</p>
-);
+export const P = ({ children }) => <p className='pb-3'>{children}</p>;
 export const Rf = ({ link, rf }) => (
 	<a href={link}>
 		<sup>{rf}</sup>
 	</a>
 );
 export const Iltr = ({ img, children }) => (
-	<section className='flex items-start justify-around flex-column-m flex-column-t'>
-		<div className='w-40 w-100-m w-100-t pa3 pa0-m pa0-l pa0-t'>
-			<img src={img} alt='alt' className='w-100' />
+	<section className='flex flex-col space-x-4 t:flex-row'>
+		<div className='w-7/12 w-full'>
+			<img src={img} alt='alt' className='w-full' />
 		</div>
-		<div className='sticky w-40 w-100-t w-100-m'>
+		<div className='sticky t:w-5/12 sm:w-full'>
 			<div>{children}</div>
 		</div>
 	</section>
@@ -112,47 +117,18 @@ export const Iltr = ({ img, children }) => (
 export const Br = () => <br></br>;
 
 export const Collab = ({ href, collab }) => (
-	<div className='f4 fw5 ph3 pv2 helvetica bg-orange white lh-copy'>
+	<div className='fixed z-40 flex items-end w-full h-12 px-3 pb-2 text-white mt-28 bg-ruby'>
 		This project was developed in close collaboration with:{' '}
+		<span className='w-2'></span>
 		<a
 			href={href}
 			target='_blank'
 			rel='noopener noreferrer'
-			className='link fw7 hover-navy'
+			className='hover:font-black'
 		>
 			{collab}
 		</a>
 	</div>
-);
-
-export const Title = ({
-	place,
-	time,
-	position,
-	title,
-	subtitle,
-	description,
-	line2,
-}) => (
-	<section className='flex pb2 bb flex-column-m'>
-		<section className='flex justify-between flex-column helvetica lh-copy ph3 w-50 w-100-m br bn-m'>
-			<div className='pb2 fw6 helvetica f4'>
-				<p className='navy'>{place}</p>
-				<p className='silver'>{time}</p>
-				<p className='orange'>{position}</p>
-			</div>
-			<div className='pv4 f-6 f-5-t f-5-m fw9 tracked-tight navy lh-title'>
-				{title}
-			</div>
-			<div className='fw6 f1 silver pb2-m bb-m f15-l f2-t f2-m tracked'>
-				{subtitle}
-			</div>
-		</section>
-		<section className='flex lh-copy w-50 w-100-m pl3 pr3 pt2-m flex-column-reverse '>
-			<div className='f2 minion fw5 f25-m navy'>{line2}</div>
-			<div className='pb2 f2 minion i fw5 f25-m orange'>{description}</div>
-		</section>
-	</section>
 );
 
 export const Biblio = ({
@@ -167,7 +143,7 @@ export const Biblio = ({
 	<a href={link} target='_blank' className='link' rel='noopener noreferrer'>
 		<div className={CN(className)}>
 			<div className='hover-orange pb2'>
-				<p className='pt2 fw6 helvetica'>{author}</p>
+				<p className='pt2 fw6 '>{author}</p>
 				<p className='i f27'>{name}</p>
 				<p>
 					{publication}
@@ -183,7 +159,7 @@ export function Collapsible(props) {
 	return (
 		// <Accordion allowZeroExpanded={true}>
 		// 	<AccordionItem>
-		// 		<AccordionItemHeading className='helvetica f4 navy'>
+		// 		<AccordionItemHeading className=' f4 navy'>
 		// 			<AccordionItemButton>{props.button}</AccordionItemButton>
 		// 		</AccordionItemHeading>
 		// 		<AccordionItemPanel>
@@ -199,23 +175,28 @@ export const ProJ = ({ children }) => (
 );
 
 export const ArrowRight = (props) => (
-	<svg width={36} height={36} viewBox='0 0 24 24' {...props}>
-		<path
-			style={{
-				textIndent: 0,
-				textAlign: 'start',
-				lineHeight: 'normal',
-				textTransform: 'none',
-				blockProgression: 'tb',
-				InkscapeFontSpecification: 'Sans',
-			}}
-			d='M12 2C6.489 2 2 6.489 2 12s4.489 10 10 10 10-4.489 10-10S17.511 2 12 2zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8-8-3.57-8-8 3.57-8 8-8zm.719 2.281L11.28 7.72 14.562 11H6v2h8.563l-3.282 3.281 1.438 1.438 5-5 .687-.719-.687-.719-5-5z'
-			overflow='visible'
-			fontFamily='Sans'
-		/>
+	<svg
+		style={{ transform: 'rotate(180deg)' }}
+		id='Layer'
+		enable-background='new 0 0 64 64'
+		height='40'
+		viewBox='0 0 64 64'
+		width='40'
+		xmlns='http://www.w3.org/2000/svg'
+	>
+		<path d='m54 30h-39.899l15.278-14.552c.8-.762.831-2.028.069-2.828-.761-.799-2.027-.831-2.828-.069l-17.448 16.62c-.755.756-1.172 1.76-1.172 2.829 0 1.068.417 2.073 1.207 2.862l17.414 16.586c.387.369.883.552 1.379.552.528 0 1.056-.208 1.449-.621.762-.8.731-2.065-.069-2.827l-15.342-14.552h39.962c1.104 0 2-.896 2-2s-.896-2-2-2z' />
 	</svg>
 );
 
-export const ArrowLeft = (props) => (
-	<ArrowRight style={{ transform: 'rotate(180deg)' }} {...props} />
+export const ArrowLeft = () => (
+	<svg
+		id='Layer'
+		enable-background='new 0 0 64 64'
+		height='40'
+		viewBox='0 0 64 64'
+		width='40'
+		xmlns='http://www.w3.org/2000/svg'
+	>
+		<path d='m54 30h-39.899l15.278-14.552c.8-.762.831-2.028.069-2.828-.761-.799-2.027-.831-2.828-.069l-17.448 16.62c-.755.756-1.172 1.76-1.172 2.829 0 1.068.417 2.073 1.207 2.862l17.414 16.586c.387.369.883.552 1.379.552.528 0 1.056-.208 1.449-.621.762-.8.731-2.065-.069-2.827l-15.342-14.552h39.962c1.104 0 2-.896 2-2s-.896-2-2-2z' />
+	</svg>
 );

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { slugify } from './utils';
 import { ArrowLeft, ArrowRight } from './components';
-import { projectTypes, getPrevAndNextProjects } from './index';
+import { projectTypes, getPrevAndNextProjects, colorTypes } from './index';
 
 export const ProjectNavigation = (props) => {
 	const { title, subtitle, type, year } = props.project;
@@ -11,24 +11,26 @@ export const ProjectNavigation = (props) => {
 
 	return (
 		<>
-			<div className='project-navigation-wrapper'>
-				<div className='project-navigation'>
+			<div className='fixed z-50 w-full mt-16 bg-white'>
+				<div className='flex flex-row justify-between px-4 py-2 border-b border-warmGray-300'>
 					{prev && (
 						<Link
 							to={`/work/${slugify(prev.type)}/${prev.year}/${slugify(
 								prev.title
 							)}?prev`}
-							className='arrow left'
+							className='flex items-center justify-start pr-4'
 						>
 							<ArrowLeft />
 						</Link>
 					)}
 
-					<div id='titproj'>
-						<b style={{ color: '#ef5419' }}>{title}</b>
-						<i style={{ color: '#ef5419' }}>{subtitle}</i>
-						<b>{projectTypes[type]}</b>
-						{year}
+					<div className='flex items-center flex-grow space-x-3'>
+						<div className='text-xl font-semibold'>{title}</div>
+						<div className='text-xl'>{subtitle}</div>
+						<Link to={`/work/${slugify(type)}/`}>
+							<div className={colorTypes[type]}>{projectTypes[type]}</div>
+						</Link>
+						<div className={colorTypes[type]}>{year}</div>
 					</div>
 
 					{next && (
@@ -36,14 +38,13 @@ export const ProjectNavigation = (props) => {
 							to={`/work/${slugify(next.type)}/${next.year}/${slugify(
 								next.title
 							)}?next`}
-							className='arrow right'
+							className='flex items-center pl-4'
 						>
 							<ArrowRight />
 						</Link>
 					)}
 				</div>
 			</div>
-			<div className='project-navigation-clearfix' />
 		</>
 	);
 };

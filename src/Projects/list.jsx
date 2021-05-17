@@ -16,7 +16,7 @@ export const ProjectList = (props) => {
 				.filter((project) => (props.type ? project.type === props.type : true))
 				.map((project, key) => (
 					<div className='relative '>
-						<div className='absolute z-30 flex items-center justify-between w-full -left-2 -top-3'>
+						<div className='absolute z-0 flex items-center justify-between w-full -left-2 -top-3'>
 							<div className={colorBubbles[project.type]}>
 								{projectTypes[project.type]}
 							</div>
@@ -63,11 +63,9 @@ export const ProjectList = (props) => {
 								project.title
 							)}`}
 						>
-							<div className='p-3 bg-gray-900 rounded-md shadow-lg '>
-								<div className={bgTypes[project.type]}>
-									<div className='flex items-center justify-center transition-all duration-300 transform scale-90 w-80 hover:scale-105 h-80'>
-										{project.title}
-									</div>
+							<div className='p-3 bg-gray-900 rounded-md hover:shadow-xl'>
+								<div className='w-full rounded bg-warmGray-200'>
+									{project.img}
 								</div>
 
 								<div className='flex items-start justify-between w-full pt-2'>

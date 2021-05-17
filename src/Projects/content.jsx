@@ -23,12 +23,12 @@ import {
 
 export function Lima() {
 	return (
-		<section>
+		<>
 			<Collab href='http://www.aetherotopies.com/' collab='Samuel Iuri' />
 			<Main>
 				<Img oneimg='/cat/lima/4.png' />
 
-				<Pic img='/cat/lima/limalogo.png' className='mw8 center pv5 pv4-m' />
+				<Pic img='/cat/lima/limalogo.png' className='self-center w-2/4 py-5' />
 
 				<Par>
 					The first stage of the process consisted in a vast analysis of all the
@@ -70,16 +70,12 @@ export function Lima() {
 					</P>
 				</Iltr>
 				<Img oneimg='/cat/lima/section.png' />
+				<div className='self-center w-9/12 m-4 space-y-4'>
+					<Pic img='/cat/lima/aeropuerto.png' imgClass='border border-black' />
 
-				<Pic
-					img='/cat/lima/aeropuerto.png'
-					className='pv3 mw68 center'
-					imgClass='ba b--black'
-				/>
-
-				<Img oneimg='/cat/lima/salida.png' className='mw68 center' />
-
-				<Img oneimg='/cat/lima/map.png' className='pt3' />
+					<Img oneimg='/cat/lima/salida.png' />
+				</div>
+				<Img oneimg='/cat/lima/map.png' className='self-center w-9/12' />
 
 				<Par>
 					<Sec title='Map' />
@@ -101,7 +97,7 @@ export function Lima() {
 				</Par>
 				<Img oneimg='/cat/lima/5.png' />
 			</Main>
-		</section>
+		</>
 	);
 }
 
@@ -595,7 +591,7 @@ export function Mental() {
 
 export function Pantone() {
 	return (
-		<section>
+		<>
 			<Collab href='http://www.aetherotopies.com/' collab='Samuel Iuri' />
 			<Main>
 				<div className='gridp mh3 mt3'>
@@ -666,7 +662,7 @@ export function Pantone() {
 
 				<Img oneimg='/cat/pantone/tram.png' />
 			</Main>
-		</section>
+		</>
 	);
 }
 export function Je() {
