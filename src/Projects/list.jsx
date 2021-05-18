@@ -14,7 +14,7 @@ export const ProjectList = (props) => {
 		<>
 			{projects
 				.filter((project) => (props.type ? project.type === props.type : true))
-				.map((project, key) => (
+				.map((project) => (
 					<div className='relative '>
 						<div className='absolute z-0 flex items-center justify-between w-full -left-2 -top-3'>
 							<div className={colorBubbles[project.type]}>
