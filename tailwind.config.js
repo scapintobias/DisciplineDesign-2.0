@@ -298,4 +298,5 @@ module.exports = {
 			serif: ['minion-pro-display', 'serif'],
 		},
 	},
+	plugins: [require('tailwindcss-font-inter')()],
 };
