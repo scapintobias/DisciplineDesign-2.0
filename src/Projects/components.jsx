@@ -178,7 +178,7 @@ export const ArrowRight = (props) => (
 	<svg
 		style={{ transform: 'rotate(180deg)' }}
 		id='Layer'
-		enable-background='new 0 0 64 64'
+		enableBackground='new 0 0 64 64'
 		height='40'
 		viewBox='0 0 64 64'
 		width='40'
@@ -191,7 +191,7 @@ export const ArrowRight = (props) => (
 export const ArrowLeft = () => (
 	<svg
 		id='Layer'
-		enable-background='new 0 0 64 64'
+		enableBackground='new 0 0 64 64'
 		height='40'
 		viewBox='0 0 64 64'
 		width='40'
