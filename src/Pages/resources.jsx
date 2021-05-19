@@ -5,7 +5,7 @@ export function Resources() {
 	return (
 		<div className='flex items-center justify-center w-full h-full mt-28'>
 			<AnimateSharedLayout>
-				<motion.ul layout initial={{ borderRadius: 25 }}>
+				<motion.ul layout>
 					{items.map((item) => (
 						<Item key={item} />
 					))}
@@ -51,4 +51,4 @@ function Content() {
 	);
 }
 
-const items = [0];
+const items = [1];
