@@ -295,7 +295,7 @@ module.exports = {
 		fontFamily: {
 			//sans: ['neue-haas-grotesk-display', 'sans-serif'],
 			sans: ['Inter', 'sans-serif'],
-			serif: ['minion-pro-display', 'serif'],
+			serif: ['big-caslon-fb', 'serif'],
 		},
 	},
 };

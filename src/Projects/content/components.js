@@ -12,8 +12,20 @@ export const Main = ({ children }) => (
 	<main className='flex flex-col mx-6 mt-48 mb-6'>{children}</main>
 );
 
+export const Pic = ({ img, className, imgClass }) => (
+	<div className={CN(className)}>
+		<img src={img} alt='img' className={CN('w-full', imgClass)}></img>
+	</div>
+);
+
+export const Img = ({ oneimg, className }) => (
+	<div className={CN(' block', className)}>
+		<img src={oneimg} alt='img' className='w-full' />
+	</div>
+);
+
 export const Par = ({ className, children }) => (
-	<section className='flex justify-center my-3 flex-column md:flex-row'>
+	<section className='flex justify-center my-3 font-serif text-2xl tracking-wide flex-column md:flex-row'>
 		<section className={CN(' w-full md:w-2/4', className)}>{children}</section>
 	</section>
 );
@@ -33,18 +45,6 @@ export const Sub = ({ title }) => (
 export const ParImg = ({ oneimg, className }) => (
 	<div className={CN('my-3', className)}>
 		<img src={oneimg} alt='img' className='w-full' />
-	</div>
-);
-
-export const Img = ({ oneimg, className }) => (
-	<div className={CN(' block', className)}>
-		<img src={oneimg} alt='img' className='w-full' />
-	</div>
-);
-
-export const Pic = ({ img, className, imgClass }) => (
-	<div className={CN(className)}>
-		<img src={img} alt='img' className={CN('w-full', imgClass)}></img>
 	</div>
 );
 
@@ -169,34 +169,3 @@ export function Collapsible(props) {
 		</Accordion>
 	);
 }
-
-export const ProJ = ({ children }) => (
-	<section className='flex flex-wrap justify-center mv4'>{children}</section>
-);
-
-export const ArrowRight = (props) => (
-	<svg
-		style={{ transform: 'rotate(180deg)' }}
-		id='Layer'
-		enableBackground='new 0 0 64 64'
-		height='40'
-		viewBox='0 0 64 64'
-		width='40'
-		xmlns='http://www.w3.org/2000/svg'
-	>
-		<path d='m54 30h-39.899l15.278-14.552c.8-.762.831-2.028.069-2.828-.761-.799-2.027-.831-2.828-.069l-17.448 16.62c-.755.756-1.172 1.76-1.172 2.829 0 1.068.417 2.073 1.207 2.862l17.414 16.586c.387.369.883.552 1.379.552.528 0 1.056-.208 1.449-.621.762-.8.731-2.065-.069-2.827l-15.342-14.552h39.962c1.104 0 2-.896 2-2s-.896-2-2-2z' />
-	</svg>
-);
-
-export const ArrowLeft = () => (
-	<svg
-		id='Layer'
-		enableBackground='new 0 0 64 64'
-		height='40'
-		viewBox='0 0 64 64'
-		width='40'
-		xmlns='http://www.w3.org/2000/svg'
-	>
-		<path d='m54 30h-39.899l15.278-14.552c.8-.762.831-2.028.069-2.828-.761-.799-2.027-.831-2.828-.069l-17.448 16.62c-.755.756-1.172 1.76-1.172 2.829 0 1.068.417 2.073 1.207 2.862l17.414 16.586c.387.369.883.552 1.379.552.528 0 1.056-.208 1.449-.621.762-.8.731-2.065-.069-2.827l-15.342-14.552h39.962c1.104 0 2-.896 2-2s-.896-2-2-2z' />
-	</svg>
-);

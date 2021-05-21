@@ -1,10 +1,7 @@
 import React from 'react';
 
 import {
-	Pantone,
 	Craf,
-	Richmond,
-	Dp,
 	Manin,
 	Saf,
 	ManinP,
@@ -80,14 +77,6 @@ export const projects = [
 		2018,
 		<img src='/grid/yape.png' alt='yape' />,
 		Ducati()
-	),
-	createProject(
-		'Pantone',
-		'Cocktail solutions',
-		'event',
-		2018,
-		<img src='/grid/yape.png' alt='yape' />,
-		Pantone()
 	),
 	createProject(
 		'JEMP',
@@ -244,23 +233,6 @@ export const projects = [
 		2011,
 		<img src='/grid/yape.png' alt='yape' />,
 		Manin()
-	),
-
-	createProject(
-		'DP',
-		'Energy',
-		'corporate',
-		2010,
-		<img src='/grid/yape.png' alt='yape' />,
-		Dp()
-	),
-	createProject(
-		'Richmond',
-		'Health Clinic',
-		'logo',
-		2010,
-		<img src='/grid/yape.png' alt='yape' />,
-		Richmond()
 	),
 
 	createProject(
