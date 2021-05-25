@@ -1,49 +1,45 @@
 import React from 'react';
 
-import {
-	Main,
-	Par,
-	Sec,
-	ParImg,
-	Iltr,
-	Img,
-	Br,
-	TwoImg,
-	Head,
-	Tit,
-	P,
-	Rf,
-	Pic,
-	Collab,
-	Collapsible,
-	Biblio,
-	ImgRid,
-} from './components';
-//import Vimeo from '@u-wave/react-vimeo';
-
 export function Parole() {
 	return (
-		<Main>
-			<Img oneimg='/cat/prigioniere/expo_8.png' className='mw8 center pb3' />
-
-			<Img oneimg='/cat/prigioniere/expo_me.jpg' className='mw8 center' />
-
-			<div className='flex pv3 flex-column-m'>
-				<Pic img='/cat/prigioniere/expo_2.jpg' className='pr3 pr0-m pb3-m' />
-
-				<Pic img='/cat/prigioniere/expo_3.jpg' className='ph2 ph0-m pb3-m' />
-
-				<Pic img='/cat/prigioniere/expo_4.jpg' className='pl3 pl0-m' />
+		<>
+			<div className='w-screen h-main'>
+				<div className='flex items-center justify-center w-full h-full'>
+					<p className='font-bold tracking-tighter uppercase futura text-9xl'>
+						parole prigioniere
+					</p>
+					<p className='absolute prose prose-2xl text-charcoal-300 bottom-20'>
+						<i>Caged Words</i>, photography exhibition in EXPO 2015
+					</p>
+				</div>
 			</div>
-			<Img oneimg='/cat/prigioniere/expo_7.jpg' className='mw8 center' />
 
-			<div className='flex pt3 flex-column-m'>
-				<Pic img='/cat/prigioniere/expo_4a.jpg' className='pr3 pr0-m pb3-m' />
+			<img src='/cat/prigioniere/expo_0.png' alt='parole' />
 
-				<Pic img='/cat/prigioniere/expo_5.jpg' className='ph2 ph0-m pb3-m' />
+			<img
+				src='/cat/prigioniere/expo_me.jpg'
+				alt='parole'
+				className='py-12 mx-auto xl:w-2/5 lg:w-2/4 md:w-3/5 t:w-4/5'
+			/>
 
-				<Pic img='/cat/prigioniere/expo_6.jpg' className='pl3 pl0-m' />
+			<div className='grid grid-cols-3'>
+				<img src='/cat/prigioniere/expo_2.jpg' alt='parole' />
+				<img src='/cat/prigioniere/expo_3.jpg' alt='parole' />
+				<img src='/cat/prigioniere/expo_4.jpg' alt='parole' />
 			</div>
-		</Main>
+			<img
+				src='/cat/prigioniere/expo_7.jpg'
+				alt='parole'
+				className='py-12 mx-auto xl:w-2/5 lg:w-2/4 md:w-3/5 t:w-4/5'
+			/>
+
+			<div className='grid grid-cols-3'>
+				<img src='/cat/prigioniere/expo_4a.jpg' alt='parole' />
+
+				<img src='/cat/prigioniere/expo_5.jpg' alt='parole' />
+
+				<img src='/cat/prigioniere/expo_6.jpg' alt='parole' />
+			</div>
+		</>
 	);
 }

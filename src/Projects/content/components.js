@@ -1,16 +1,75 @@
 import React from 'react';
 import CN from 'classnames';
-import {
-	Accordion,
-	AccordionItem,
-	AccordionItemHeading,
-	AccordionItemButton,
-	AccordionItemPanel,
-} from 'react-accessible-accordion';
 
 export const Main = ({ children }) => (
-	<main className='flex flex-col mx-6 mt-48 mb-6'>{children}</main>
+	<main className='flex flex-col sm:mt-4 md:mt-6 md:mb-18 sm:mb-24 md:mx-6 sm:mx-4'>
+		{children}
+	</main>
 );
+
+export const Par = ({ children }) => (
+	<section className='max-w-3xl px-4 py-10 mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl'>
+		<div className='mx-auto prose-sm prose sm:prose lg:prose-lg xl:prose-2xl'>
+			{children}
+		</div>
+	</section>
+);
+
+export const Sec = ({ title, subtitle }) => (
+	<div className='font-sans prose prose-charcoal'>
+		<h1>{title}</h1>
+		<h2 className='text-charcoal-300 text-subsec'>{subtitle}</h2>
+	</div>
+);
+export const Specimen = (props) => (
+	<div className={props.className}>
+		<div className='p-6 space-y-4 bg-charcoal-50 bg-opacity-40 rounded-3xl'>
+			<img src={props.image} alt='specimen' />
+		</div>
+	</div>
+);
+
+export const Biblio = (props) => (
+	<>
+		<a
+			href={props.link}
+			target='_blank'
+			rel='noopener noreferrer'
+			className='inline-block m-1 transition-shadow duration-300 ease-in-out rounded-lg bg-warmGray-100 text-charcoal-800 t:w-96 sm:w-72 hover:bg-charcoal-800 hover:text-warmGray-50'
+		>
+			<div className='m-5'>
+				<p className='pb-5 font-sans font-medium tracking-tighter sm:text-2xl t:text-4xl'>
+					{props.author}
+				</p>
+				<p className='pb-5 font-serif italic sm:text-2xl t:text-3xl'>
+					{props.name}
+				</p>
+				<p className='font-serif not-italic sm:text-xl t:text-2xl'>
+					{props.publication}
+				</p>
+				<p className='font-serif not-italic sm:text-xl t:text-2xl'>
+					{props.pages}
+				</p>
+				<p className='mt-5 font-serif not-italic sm:text-xl t:text-2xl'>
+					{props.year}
+				</p>
+			</div>
+		</a>
+	</>
+);
+
+export const DescriptionImage = (props) => (
+	<div className='w-full py-32'>
+		<img src={props.src} alt='alt' className='w-full' />
+		<div className='h-10 border-b'>
+			<p className='flex flex-col justify-center h-full tracking-wide text-charcoal-200'>
+				{props.description}
+			</p>
+		</div>
+	</div>
+);
+
+// §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ //
 
 export const Pic = ({ img, className, imgClass }) => (
 	<div className={CN(className)}>
@@ -21,20 +80,6 @@ export const Pic = ({ img, className, imgClass }) => (
 export const Img = ({ oneimg, className }) => (
 	<div className={CN(' block', className)}>
 		<img src={oneimg} alt='img' className='w-full' />
-	</div>
-);
-
-export const Par = ({ className, children }) => (
-	<section className='flex justify-center my-3 font-serif text-2xl tracking-wide flex-column md:flex-row'>
-		<section className={CN(' w-full md:w-2/4', className)}>{children}</section>
-	</section>
-);
-
-export const Sec = ({ title, subtitle }) => (
-	<div className='py-4 text-4xl font-bold text-warmGray-500'>
-		{title}
-		<br></br>
-		{subtitle}
 	</div>
 );
 
@@ -98,11 +143,7 @@ export const Tit = ({ tit }) => (
 	<p className='py-3 text-2xl font-medium text-warmGray-500'>{tit}</p>
 );
 export const P = ({ children }) => <p className='pb-3'>{children}</p>;
-export const Rf = ({ link, rf }) => (
-	<a href={link}>
-		<sup>{rf}</sup>
-	</a>
-);
+
 export const Iltr = ({ img, children }) => (
 	<section className='flex flex-col space-x-4 t:flex-row'>
 		<div className='w-7/12'>
@@ -115,57 +156,3 @@ export const Iltr = ({ img, children }) => (
 );
 
 export const Br = () => <br></br>;
-
-export const Collab = ({ href, collab }) => (
-	<div className='fixed z-40 flex items-end w-full h-12 px-3 pb-2 text-white mt-28 bg-ruby'>
-		This project was developed in close collaboration with:{' '}
-		<span className='w-2'></span>
-		<a
-			href={href}
-			target='_blank'
-			rel='noopener noreferrer'
-			className='hover:font-black'
-		>
-			{collab}
-		</a>
-	</div>
-);
-
-export const Biblio = ({
-	link,
-	name,
-	author,
-	year,
-	publication,
-	pages,
-	className,
-}) => (
-	<a href={link} target='_blank' className='link' rel='noopener noreferrer'>
-		<div className={CN(className)}>
-			<div className='hover-orange pb2'>
-				<p className='pt2 fw6 '>{author}</p>
-				<p className='i f27'>{name}</p>
-				<p>
-					{publication}
-					<span>{pages}</span>
-					{year}
-				</p>
-			</div>
-		</div>
-	</a>
-);
-
-export function Collapsible(props) {
-	return (
-		<Accordion allowZeroExpanded={true}>
-			<AccordionItem>
-				<AccordionItemHeading className=' f4 navy'>
-					<AccordionItemButton>{props.button}</AccordionItemButton>
-				</AccordionItemHeading>
-				<AccordionItemPanel>
-					<div>{props.children}</div>
-				</AccordionItemPanel>
-			</AccordionItem>
-		</Accordion>
-	);
-}

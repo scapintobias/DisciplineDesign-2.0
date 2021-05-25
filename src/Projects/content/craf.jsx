@@ -12,7 +12,6 @@ import {
 	Head,
 	Tit,
 	P,
-	Rf,
 	Pic,
 	Collab,
 	Collapsible,
@@ -54,10 +53,8 @@ export function Craf() {
 					& Mayer in Frankfurt am Main. It was released from 1964 and later
 					issued by a range of companies in phototypesetting and digital
 					versions.
-					<Rf
-						link='http://www.klingspor-museum.de/KlingsporKuenstler/Schriftdesigner/Hoefer/KGHoefer.pdf'
-						rf='1'
-					/>
+					link='http://www.klingspor-museum.de/KlingsporKuenstler/Schriftdesigner/Hoefer/KGHoefer.pdf'
+					rf='1' />
 				</P>
 				<Tit tit='Rotis Sans' />
 				<P>

@@ -11,8 +11,8 @@ export const ProjectNavigation = (props) => {
 
 	return (
 		<>
-			<div className='fixed z-50 w-full mt-16 bg-white'>
-				<div className='flex flex-row justify-between px-4 py-2 border-b border-warmGray-300'>
+			<div className='fixed bottom-0 z-30 flex items-center w-full h-screen bg-white border-t md:h-12 sm:h-20 '>
+				<div className='flex flex-row justify-between w-full px-4 '>
 					{prev && (
 						<Link
 							to={`/work/${slugify(prev.type)}/${prev.year}/${slugify(
@@ -24,13 +24,16 @@ export const ProjectNavigation = (props) => {
 						</Link>
 					)}
 
-					<div className='flex items-center flex-grow space-x-3'>
-						<div className='text-xl font-semibold'>{title}</div>
-						<div className='text-xl'>{subtitle}</div>
-						<Link to={`/work/${slugify(type)}/`}>
+					<div className='flex items-center flex-grow gap-4 sm:justify-between'>
+						<div className='flex sm:gap-1 t:gap-4 sm:flex-col t:flex-row md:text-xl sm:text-xs'>
+							<div className='font-semibold'>{title}</div>
+							<div className='tracking-tight '>{subtitle}</div>
+						</div>
+						<div className='flex gap-1 md:flex-row sm:flex-col sm:items-end'>
 							<div className={colorTypes[type]}>{projectTypes[type]}</div>
-						</Link>
-						<div className={colorTypes[type]}>{year}</div>
+
+							<div className={colorTypes[type]}>{year}</div>
+						</div>
 					</div>
 
 					{next && (

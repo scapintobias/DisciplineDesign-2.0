@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { NavLink } from 'react-router-dom';
+
 function Nav() {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
-		<div className='fixed z-50 w-screen mb-4'>
+		<div className='sticky z-50 w-screen -top-20'>
 			<nav className='bg-ruby'>
 				<div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
 					<div className='flex items-center justify-between h-16'>
@@ -18,28 +19,27 @@ function Nav() {
 								<div className='flex items-baseline justify-between ml-10 space-x-3'>
 									<NavLink
 										to='/work'
-										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:bg-white hover:text-black hover:border hover:rounded-full max-w-min'
+										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:text-charcoal-800 '
 									>
 										Work
 									</NavLink>
 
 									<NavLink
 										to='/resources'
-										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:bg-white hover:text-black hover:border hover:rounded-full max-w-min'
+										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:text-charcoal-800'
 									>
 										Resources
 									</NavLink>
-
 									<NavLink
 										to='/about'
-										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:bg-white hover:text-black hover:border hover:rounded-full max-w-min'
+										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:text-charcoal-800'
 									>
 										About
 									</NavLink>
 
 									<NavLink
 										to='/contacts'
-										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:bg-white hover:text-black hover:border hover:rounded-full max-w-min'
+										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:text-charcoal-800'
 									>
 										Contacts
 									</NavLink>

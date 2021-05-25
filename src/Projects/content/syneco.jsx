@@ -1,58 +1,27 @@
 import React from 'react';
 
-import {
-	Main,
-	Par,
-	Sec,
-	ParImg,
-	Iltr,
-	Img,
-	Br,
-	TwoImg,
-	Head,
-	Tit,
-	P,
-	Rf,
-	Pic,
-	Collab,
-	Collapsible,
-	Biblio,
-	ImgRid,
-} from './components';
-//import Vimeo from '@u-wave/react-vimeo';
-
 export function Syneco() {
 	return (
-		<Main>
-			<Img oneimg='/cat/syneco/syneco_1.png' />
+		<>
+			<div className='w-screen h-main'>
+				<div className='flex items-center justify-center w-full h-full'>
+					<img
+						src='/cat/syneco/syneco_1.png'
+						alt='logo'
+						className='object-cover'
+					/>
+					<p className='absolute prose prose-2xl text-charcoal-300 bottom-20'>
+						New identity for Syneco
+					</p>
+				</div>
+			</div>
 
-			<Iltr img='/cat/syneco/syneco_2.png'>
-				<Head head='Specimens of the font involved for composing the logo and the rest of the Corporate Image.' />
-				<Tit tit='Neue Haas Grotesk' />
-				<P>
-					The first weights of Neue Haas Grotesk were designed in 1957-1958 by
-					Max Miedinger for the Haas’sche Schriftgiesserei in Switzerland, with
-					art direction by the company’s principal, Eduard Hoffmann. Neue Haas
-					Grotesk was to be the answer to the British and German grotesques that
-					had become hugely popular thanks to the success of functionalist Swiss
-					typography. The typeface was soon revised and released as Helvetica by
-					Linotype AG.
-				</P>
-				<Tit tit='Our Bodoni' />
-				<P>
-					Commissioned by Bert Di Pamphilis of WTC and designed by Tom Carnase
-					under the direction of Massimo Vignelli. The goal of this 1989 Bodoni
-					revival was to match the proportions of Neue Haas Grotesk.
-				</P>
-			</Iltr>
-			<TwoImg
-				image1='/cat/syneco/syneco_3.png'
-				image2='/cat/syneco/syneco_4.png'
-			/>
-			<TwoImg
-				image1='/cat/syneco/syneco_6.png'
-				image2='/cat/syneco/syneco_5.png'
-			/>
-		</Main>
+			<div className='grid l:grid-cols-2 sm:grid-cols-1'>
+				<img src='/cat/syneco/syneco_3.png' alt='#' />
+				<img src='/cat/syneco/syneco_4.png' alt='##' />
+				<img src='/cat/syneco/syneco_6.png' alt='#' />
+				<img src='/cat/syneco/syneco_5.png' alt='##' />
+			</div>
+		</>
 	);
 }

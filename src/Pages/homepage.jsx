@@ -1,13 +1,12 @@
 import React from 'react';
 
 export const Homepage = () => (
-	<main className='flex flex-wrap items-center justify-center min-h-screen lg:text-7xl md:text-5xl t:text-2xl sm:text-xl'>
-		<div className='font-sans font-bold text-ruby'>
-			<div className='pb-5'>
-				<p>
-					Visual <span className='font-light'>&</span> Interaction Design
-				</p>
-			</div>
+	<>
+		<div className='flex flex-col items-center justify-center font-sans font-bold h-home lg:text-7xl md:text-5xl t:text-2xl sm:text-xl text-ruby'>
+			<p className='pb-10'>
+				Visual <span className='font-light'>&</span> Interaction Design
+			</p>
+
 			<div className='font-light'>
 				<p>Design for every dimension.</p>
 				<p>Design for brands.</p>
@@ -17,5 +16,8 @@ export const Homepage = () => (
 				<p>Design for All.</p>
 			</div>
 		</div>
-	</main>
+		<div className='fixed w-full h-10 p-2 font-extralight justify-self-end bg-charcoal-1200 text-charcoal-50'>
+			DISCIPLINEDESIGN© 2020 - P.IVA 04273780272
+		</div>
+	</>
 );

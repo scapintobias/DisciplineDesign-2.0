@@ -12,6 +12,32 @@ body {
 	height: 20rem;
 }
 
-.h-screen {
-	height: calc(100vh - 169px);
+@layer utilities {
+	.mb-18 {
+		margin-bottom: 4.5rem;
+	}
+	.mt-22 {
+		margin-top: 5.5rem;
+	}
+	.h-lima {
+		height: calc(100vh - 14rem);
+	}
+	.h-main {
+		height: calc(100vh - 7rem);
+	}
+	.h-home {
+		height: calc(100vh - 6.5rem);
+	}
+	.col-1 {
+		column-count: 1;
+	}
+	.col-2 {
+		column-count: 2;
+	}
+	.col-3 {
+		column-count: 3;
+	}
+	.col-4 {
+		column-count: 4;
+	}
 }

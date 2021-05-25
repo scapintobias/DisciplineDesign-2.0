@@ -28,12 +28,11 @@ import {
 	YapeSrl,
 } from './content';
 
-const createProject = (title, subtitle, type, year, img, content) => ({
+const createProject = (title, subtitle, type, year, content) => ({
 	title,
 	subtitle,
 	type,
 	year,
-	img,
 	content,
 });
 
@@ -43,7 +42,7 @@ export const projects = [
 		'Subway system',
 		'wayfinding',
 		2019,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Lima()
 	),
 	createProject(
@@ -51,7 +50,7 @@ export const projects = [
 		'e-Novia',
 		'ux',
 		2018,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Yape()
 	),
 	createProject(
@@ -59,7 +58,7 @@ export const projects = [
 		'e-Novia',
 		'corporate',
 		2018,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		YapeSrl()
 	),
 	createProject(
@@ -67,7 +66,7 @@ export const projects = [
 		'Corporate',
 		'photography',
 		2018,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Mental()
 	),
 	createProject(
@@ -75,7 +74,7 @@ export const projects = [
 		'Ducati Link App',
 		'video',
 		2018,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Ducati()
 	),
 	createProject(
@@ -83,7 +82,7 @@ export const projects = [
 		'Corporate',
 		'photography',
 		2017,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Je()
 	),
 	createProject(
@@ -91,7 +90,7 @@ export const projects = [
 		'9/11',
 		'poster',
 		2016,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Mourn()
 	),
 	createProject(
@@ -99,7 +98,7 @@ export const projects = [
 		'Gruppo Creamoda',
 		'logo',
 		2016,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Ideascudo()
 	),
 	createProject(
@@ -107,7 +106,7 @@ export const projects = [
 		'Olympics',
 		'logo',
 		2016,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Tokyo()
 	),
 	createProject(
@@ -115,7 +114,7 @@ export const projects = [
 		'Oil',
 		'corporate',
 		2016,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Syneco()
 	),
 	createProject(
@@ -123,7 +122,7 @@ export const projects = [
 		'Timeline',
 		'poster',
 		2016,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Timeline()
 	),
 	createProject(
@@ -131,7 +130,7 @@ export const projects = [
 		'Superheroes',
 		'photography',
 		2015,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Svolta()
 	),
 	createProject(
@@ -139,7 +138,7 @@ export const projects = [
 		'Expo 2015',
 		'photography',
 		2015,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Parole()
 	),
 	createProject(
@@ -147,7 +146,7 @@ export const projects = [
 		'Restaurant',
 		'corporate',
 		2015,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Borromeo()
 	),
 	createProject(
@@ -155,7 +154,7 @@ export const projects = [
 		'Sbacon',
 		'exhibit',
 		2015,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Arte()
 	),
 
@@ -164,7 +163,7 @@ export const projects = [
 		'Gallery',
 		'corporate',
 		2014,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Corte()
 	),
 	createProject(
@@ -172,7 +171,7 @@ export const projects = [
 		'Milano 2015',
 		'logo',
 		2013,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Expo()
 	),
 	createProject(
@@ -180,7 +179,7 @@ export const projects = [
 		'Untold story',
 		'print',
 		2013,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Migrants()
 	),
 	createProject(
@@ -188,7 +187,7 @@ export const projects = [
 		'A handful of papers',
 		'print',
 		2013,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Numeriprimi()
 	),
 	createProject(
@@ -196,16 +195,16 @@ export const projects = [
 		'Archive',
 		'corporate',
 		2013,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Castiglioni()
 	),
 
 	createProject(
-		'Rankin Paulston',
-		'Design Studio',
+		'RPA',
+		'Studio',
 		'corporate',
 		2011,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Rankin()
 	),
 
@@ -214,7 +213,7 @@ export const projects = [
 		'di Passariano',
 		'poster',
 		2011,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		ManinP()
 	),
 
@@ -223,7 +222,7 @@ export const projects = [
 		'Transport',
 		'corporate',
 		2011,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Saf()
 	),
 	createProject(
@@ -231,7 +230,7 @@ export const projects = [
 		'di Passariano',
 		'corporate',
 		2011,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Manin()
 	),
 
@@ -240,7 +239,7 @@ export const projects = [
 		'With Maurizio Milani',
 		'corporate',
 		2008,
-		<img src='/grid/yape.png' alt='yape' />,
+
 		Craf()
 	),
 ];

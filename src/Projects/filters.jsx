@@ -2,10 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { colorTypes } from './index';
 
-export const ProjectFilters = (props) => {
+export const ProjectFilters = () => {
 	return (
 		<>
-			<div className='box-border fixed z-20 flex items-center w-full p-4 mt-16 space-x-4 overflow-x-scroll bg-white border-b'>
+			<div className='box-border z-20 flex items-center w-full h-full p-2 space-x-4 overflow-x-scroll bg-white border-b justify-items-center t:justify-center'>
 				<NavLink
 					exact
 					to='/work'
@@ -38,15 +38,11 @@ export const ProjectFilters = (props) => {
 				<NavLink to='/work/exhibit' className={colorTypes.exhibit}>
 					Exhibit
 				</NavLink>
-				<NavLink to='/work/event' className={colorTypes.event}>
+				{/* <NavLink to='/work/event' className={colorTypes.event}>
 					Events
-				</NavLink>
-				<div className='px-1 py-2 text-xs leading-none tracking-wide text-white uppercase rounded-full '>
-					{' '}
-				</div>
+				</NavLink> */}
+				<div className='px-1 py-2 text-xs leading-none tracking-wide text-white uppercase rounded-full '></div>
 			</div>
-
-			<div className='clear-both h-32' />
 		</>
 	);
 };
