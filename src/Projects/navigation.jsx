@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { slugify } from './utils';
 import { ArrowLeft, ArrowRight } from './components';
-import { projectTypes, getPrevAndNextProjects, colorTypes } from './index';
+import { projectTypes, getPrevAndNextProjects } from './index';
 
 export const ProjectNavigation = (props) => {
 	const { title, subtitle, type, year } = props.project;
@@ -11,7 +11,7 @@ export const ProjectNavigation = (props) => {
 
 	return (
 		<>
-			<div className='fixed bottom-0 z-30 flex items-center w-full h-screen bg-white border-t md:h-12 sm:h-20 '>
+			<div className='fixed bottom-0 z-30 flex items-center w-full h-screen bg-white border-t md:h-12 sm:h-16 '>
 				<div className='flex flex-row justify-between w-full px-4 '>
 					{prev && (
 						<Link
@@ -25,14 +25,21 @@ export const ProjectNavigation = (props) => {
 					)}
 
 					<div className='flex items-center flex-grow gap-4 sm:justify-between'>
-						<div className='flex sm:gap-1 t:gap-4 sm:flex-col t:flex-row md:text-xl sm:text-xs'>
-							<div className='font-semibold'>{title}</div>
-							<div className='tracking-tight '>{subtitle}</div>
+						<div className='flex sm:gap-1 md:gap-4 sm:flex-col md:flex-row'>
+							<div className='text-sm font-medium tracking-wider uppercase'>
+								{title}
+							</div>
+							<div className='text-sm font-medium tracking-wider uppercase '>
+								{subtitle}
+							</div>
 						</div>
-						<div className='flex gap-1 md:flex-row sm:flex-col sm:items-end'>
-							<div className={colorTypes[type]}>{projectTypes[type]}</div>
-
-							<div className={colorTypes[type]}>{year}</div>
+						<div className='flex md:gap-4 md:flex-row sm:flex-col sm:items-end'>
+							<div className='text-sm font-medium tracking-wider uppercase'>
+								{projectTypes[type]}
+							</div>
+							<div className='text-sm font-medium tracking-wider uppercase'>
+								{year}
+							</div>
 						</div>
 					</div>
 

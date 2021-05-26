@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {
 	Craf,
 	Manin,
@@ -45,22 +43,7 @@ export const projects = [
 
 		Lima()
 	),
-	createProject(
-		'Yape',
-		'e-Novia',
-		'ux',
-		2018,
-
-		Yape()
-	),
-	createProject(
-		'Yape',
-		'e-Novia',
-		'corporate',
-		2018,
-
-		YapeSrl()
-	),
+	createProject('Yape SRL', 'e-Novia', 'corporate', 2018, YapeSrl()),
 	createProject(
 		'Mental Coach',
 		'Corporate',
@@ -243,3 +226,13 @@ export const projects = [
 		Craf()
 	),
 ];
+
+const createStudy = (title, subtitle, type, year, content) => ({
+	title,
+	subtitle,
+	type,
+	year,
+	content,
+});
+
+export const studies = [createStudy('Yape', 'e-Novia', 'ux', 2018, Yape())];

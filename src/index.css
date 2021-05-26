@@ -19,6 +19,11 @@ body {
 	.mt-22 {
 		margin-top: 5.5rem;
 	}
+
+	.max-h-work {
+		max-height: calc(100vh - 5.5rem);
+	}
+
 	.h-lima {
 		height: calc(100vh - 14rem);
 	}

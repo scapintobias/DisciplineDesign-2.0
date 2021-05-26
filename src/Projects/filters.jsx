@@ -1,48 +1,79 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { colorTypes } from './index';
+import { Fragment, useState } from 'react';
+import { Listbox, Transition } from '@headlessui/react';
+import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
 
-export const ProjectFilters = () => {
+const filters = [
+	{ type: 'All', to: '/work/' },
+	{ type: 'UX/UI', to: '/work/ux' },
+	{ type: 'Photography', to: '/work/photography' },
+	{ type: 'Wayfinding', to: '/work/wayfinding' },
+	{ type: 'Corporate Branding', to: '/work/corporate' },
+	{ type: 'Print', to: '/work/print' },
+	{ type: 'Posters', to: '/work/poster' },
+	{ type: 'Video', to: '/work/video' },
+	{ type: 'Exhibit', to: '/work/exhibit' },
+];
+
+export function ProjectFilters() {
+	const [selected, setSelected] = useState(filters[0]);
+
 	return (
-		<>
-			<div className='box-border z-20 flex items-center w-full h-full p-2 space-x-4 overflow-x-scroll bg-white border-b justify-items-center t:justify-center'>
-				<NavLink
-					exact
-					to='/work'
-					className='px-3 py-2 text-xs leading-none tracking-wide text-white uppercase rounded-full bg-coolGray-500'
-				>
-					All
-				</NavLink>
-
-				<NavLink to='/work/ux' className={colorTypes.ux}>
-					UX/UI
-				</NavLink>
-				<NavLink to='/work/photography' className={colorTypes.photography}>
-					Photography
-				</NavLink>
-				<NavLink to='/work/wayfinding' className={colorTypes.wayfinding}>
-					Wayfinding
-				</NavLink>
-				<NavLink to='/work/corporate' className={colorTypes.corporate}>
-					Branding
-				</NavLink>
-				<NavLink to='/work/poster' className={colorTypes.poster}>
-					Posters
-				</NavLink>
-				<NavLink to='/work/print' className={colorTypes.print}>
-					Print
-				</NavLink>
-				<NavLink to='/work/video' className={colorTypes.video}>
-					Video
-				</NavLink>
-				<NavLink to='/work/exhibit' className={colorTypes.exhibit}>
-					Exhibit
-				</NavLink>
-				{/* <NavLink to='/work/event' className={colorTypes.event}>
-					Events
-				</NavLink> */}
-				<div className='px-1 py-2 text-xs leading-none tracking-wide text-white uppercase rounded-full '></div>
-			</div>
-		</>
+		<div className='w-72'>
+			<Listbox value={selected} onChange={setSelected}>
+				<div className='relative mt-1'>
+					<Listbox.Button className='relative w-full py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm'>
+						<span className='block truncate'>{selected.type}</span>
+						<span className='absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none'>
+							<SelectorIcon
+								className='w-5 h-5 text-gray-400'
+								aria-hidden='true'
+							/>
+						</span>
+					</Listbox.Button>
+					<Transition
+						as={Fragment}
+						leave='transition ease-in duration-100'
+						leaveFrom='opacity-100'
+						leaveTo='opacity-0'
+					>
+						<Listbox.Options className='absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
+							{filters.map((filter, filterIdx) => (
+								<Listbox.Option
+									key={filterIdx}
+									className={({ active }) =>
+										`${active ? 'text-ruby ' : 'text-charcoal-800'}
+                          cursor-default select-none relative py-2 pl-10 pr-4`
+									}
+									value={filter}
+								>
+									{({ selected, active }) => (
+										<>
+											<NavLink to={filter.to}>
+												<span
+													className={`${
+														selected ? 'font-medium' : 'font-normal'
+													} block truncate`}
+												>
+													{filter.type}
+												</span>
+												{selected ? (
+													<span
+														className={`${active ? 'text-ruby' : 'text-ruby'}
+                                absolute inset-y-0 left-0 flex items-center pl-3`}
+													>
+														<CheckIcon className='w-5 h-5' aria-hidden='true' />
+													</span>
+												) : null}
+											</NavLink>
+										</>
+									)}
+								</Listbox.Option>
+							))}
+						</Listbox.Options>
+					</Transition>
+				</div>
+			</Listbox>
+		</div>
 	);
-};
+}

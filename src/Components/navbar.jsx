@@ -6,12 +6,12 @@ function Nav() {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div className='sticky z-50 w-screen -top-20'>
-			<nav className='bg-ruby'>
+			<nav>
 				<div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
 					<div className='flex items-center justify-between h-16'>
 						<div className='flex items-center justify-between md:min-w-full'>
 							<NavLink className='flex-shrink-0' to='/'>
-								<span className='font-black tracking-tighter text-white t:text-4xl sm:text-3xl'>
+								<span className='font-black tracking-tighter text-ruby t:text-4xl sm:text-3xl'>
 									DisciplineDesign
 								</span>
 							</NavLink>
@@ -19,27 +19,27 @@ function Nav() {
 								<div className='flex items-baseline justify-between ml-10 space-x-3'>
 									<NavLink
 										to='/work'
-										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:text-charcoal-800 '
+										className='px-3 py-2 font-medium leading-none tracking-wide uppercase text-ruby hover:text-charcoal-800 '
 									>
 										Work
 									</NavLink>
 
 									<NavLink
 										to='/resources'
-										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:text-charcoal-800'
+										className='px-3 py-2 font-medium leading-none tracking-wide uppercase text-ruby hover:text-charcoal-800'
 									>
 										Resources
 									</NavLink>
 									<NavLink
 										to='/about'
-										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:text-charcoal-800'
+										className='px-3 py-2 font-medium leading-none tracking-wide uppercase text-ruby hover:text-charcoal-800'
 									>
 										About
 									</NavLink>
 
 									<NavLink
 										to='/contacts'
-										className='px-3 py-2 font-medium leading-none tracking-wide text-white uppercase hover:text-charcoal-800'
+										className='px-3 py-2 font-medium leading-none tracking-wide uppercase text-ruby hover:text-charcoal-800'
 									>
 										Contacts
 									</NavLink>
@@ -107,7 +107,7 @@ function Nav() {
 							<div ref={ref} className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
 								<NavLink
 									to='/work'
-									className='block w-full px-4 py-4 text-lg font-medium text-right text-white rounded-full hover:bg-white hover:text-black'
+									className='block w-full px-4 py-4 text-lg font-medium text-right rounded-full text-ruby hover:bg-white hover:text-black'
 									onClick={() => setIsOpen(!isOpen)}
 								>
 									Work
@@ -115,7 +115,7 @@ function Nav() {
 
 								<NavLink
 									to='/resources'
-									className='block w-full px-4 py-4 text-lg font-medium text-right text-white rounded-full hover:bg-white hover:text-black'
+									className='block w-full px-4 py-4 text-lg font-medium text-right rounded-full text-ruby hover:bg-white hover:text-black'
 									onClick={() => setIsOpen(!isOpen)}
 								>
 									Resources
@@ -123,7 +123,7 @@ function Nav() {
 
 								<NavLink
 									to='/about'
-									className='block w-full px-4 py-4 text-lg font-medium text-right text-white rounded-full hover:bg-white hover:text-black'
+									className='block w-full px-4 py-4 text-lg font-medium text-right rounded-full text-ruby hover:bg-white hover:text-black'
 									onClick={() => setIsOpen(!isOpen)}
 								>
 									About
@@ -131,7 +131,7 @@ function Nav() {
 
 								<NavLink
 									to='/contacts'
-									className='block w-full px-4 py-4 text-lg font-medium text-right text-white rounded-full hover:bg-white hover:text-black'
+									className='block w-full px-4 py-4 text-lg font-medium text-right rounded-full text-ruby hover:bg-white hover:text-black'
 									onClick={() => setIsOpen(!isOpen)}
 								>
 									Contacts

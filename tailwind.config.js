@@ -309,7 +309,6 @@ module.exports = {
 			// => @media (min-width: 1536px) { ... }
 		},
 		fontFamily: {
-			//sans: ['neue-haas-grotesk-display', 'sans-serif'],
 			sans: ['Inter', 'sans-serif'],
 			serif: ['Charter', 'normal'],
 		},
