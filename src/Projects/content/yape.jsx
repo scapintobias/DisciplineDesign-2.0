@@ -1,16 +1,19 @@
 import React from 'react';
 
-import { Main, Par, Sec, Img, Br, Biblio } from './components';
+import { Par, Img, StudiesGrid, Study } from './components';
 import Vimeo from '@u-wave/react-vimeo';
 export function Yape() {
 	return (
 		<>
-			<div className='bg-blue-300 h-main'>
-				<p className='absolute font-serif text-xs text-right bottom-16 left-6 text-charcoal-50'>
-					To comply with my confidentiality agreement I have omitted and
-					appropriated confidential information. These designs are a
-					reinterpretation of the original.
-				</p>
+			<div className='h-study'>
+				<div className='absolute w-full text-charcoal-50 bottom-6'>
+					<div className='max-w-3xl sm:mx-4 md:mx-auto'>
+						<p className='pb-4 text-5xl font-extralight'>Yape</p>
+						<p className='text-4xl font-extralight'>
+							Needed a way to be driven remotely
+						</p>
+					</div>
+				</div>
 				<img
 					src='https://e-novia.it/wp-content/uploads/2018/11/6_Yape_REV01.jpg'
 					alt='yape'
@@ -19,7 +22,7 @@ export function Yape() {
 			</div>
 
 			<Par>
-				<h1>My Role</h1>
+				<h2>My Role</h2>
 				<p>
 					I led the design for the driving interface between July and November
 					2018. I worked alongside the CEO of the company, a project manager, a
@@ -30,7 +33,7 @@ export function Yape() {
 					focus on another app for the same company.
 				</p>
 				<p>The Milestone was achieved shortly after.</p>
-				<h1>Structure and management</h1>
+				<h2>Structure and management</h2>
 				<p>
 					When I arrived, the engineering team had already solved the majority
 					of the mechanical issues, and implemented an alpha version of the
@@ -61,7 +64,7 @@ export function Yape() {
 					research, and understanding how to integrate the interface design into
 					this extremely complex system.
 				</p>
-				<h1>My contribution</h1>
+				<h2>My contribution</h2>
 				<p>
 					Although the drive-by-sight was completely functional, the only
 					features already implemented for the remote control were the decoding
@@ -86,14 +89,14 @@ export function Yape() {
 					months of almost daily iterations the product would be considered
 					finished and the milestone achieved.
 				</p>
-				<h1>The research challenges</h1>
+				<h2>The research challenges</h2>
 				<p>
 					After some amount of time trying to deline which were the upmost
 					problems to undertake, they can be divided into three groups:
 				</p>
 
-				<h2>First group</h2>
-				<h3>Bound to the perception of the driver</h3>
+				<h3>First group</h3>
+				<h4>Bound to the perception of the driver</h4>
 
 				<ul>
 					<li>Resolve the perception of depth</li>
@@ -102,8 +105,8 @@ export function Yape() {
 					<li>Resolve the perception of acceleration</li>
 				</ul>
 
-				<h2>Second group</h2>
-				<h3>Bound to the actual driving</h3>
+				<h3>Second group</h3>
+				<h4>Bound to the actual driving</h4>
 
 				<ul>
 					<li>Design a reference system inside the viewport</li>
@@ -111,8 +114,8 @@ export function Yape() {
 					<li>Calibrate the sensibility of the controller's commands</li>
 				</ul>
 
-				<h2>Third group</h2>
-				<h3>Bound to the position of the drone</h3>
+				<h3>Third group</h3>
+				<h4>Bound to the position of the drone</h4>
 
 				<ul>
 					<li>
@@ -126,14 +129,17 @@ export function Yape() {
 			</Par>
 			<img src='/img/lidar.jpg' alt='lidar' className='py-7' />
 			<Par>
-				<h1>The research areas</h1>
-				Defined the challenges, the research field became more clear and
-				delimited. It started searching about general robotics, human-machine
-				interaction and human-machine interface, with a focus on service robots,
-				I needed a strong base of knowledge to comprehend and position the
-				results of the actual research, being able to evaluate if they improved
-				our specific project, or were general considerations difficult to apply.
-				<h2>First group</h2>
+				<h2>The research areas</h2>
+				<p>
+					Defined the challenges, the research field became more clear and
+					delimited. It started searching about general robotics, human-machine
+					interaction and human-machine interface, with a focus on service
+					robots, I needed a strong base of knowledge to comprehend and position
+					the results of the actual research, being able to evaluate if they
+					improved our specific project, or were general considerations
+					difficult to apply.
+				</p>
+				<h3>First group</h3>
 				<p>
 					The key target of this phase were the human factors, cognitive
 					psychology, which are the ways humans perceive through the senses, and
@@ -143,7 +149,7 @@ export function Yape() {
 					providing for the lack of analog signals, making the drive flawless
 					and immersive.
 				</p>
-				<h2>Second group</h2>
+				<h3>Second group</h3>
 				<p>
 					Analised the filtered perception in a broad sense, the second group
 					brings us in the centre of our project. Thus, the target of the
@@ -153,15 +159,15 @@ export function Yape() {
 					DaVinci system for telesurgery, parking sensors, and control rooms in
 					general.
 				</p>
-				<h2>Third group</h2>
+				<h3>Third group</h3>
 				<p>
 					I searched into the graphic outputs of the LIDAR sensors, to
 					understand whether it was possible to take advantage of something
 					already available, or if it was necessary designing something new from
 					the ground up.
 				</p>
-				<h1>Solutions</h1>
-				<h2>Driving reference system</h2>
+				<h2>Solutions</h2>
+				<h3>Driving reference system</h3>
 				<p>
 					The main interface whom we interact with is the webcam's stream
 					situated on the front side of the vehicle. It has the advantage of a
@@ -173,7 +179,7 @@ export function Yape() {
 					to use solutions emerged from the research and adapt them to our
 					needs.
 				</p>
-				<h3>Pointing and Direction</h3>
+				<h4>Pointing and Direction</h4>
 				<p>
 					The first thing to be taken into consideration was a central
 					viewfinder, in order to have a pointing module, and to have a brief
@@ -189,7 +195,7 @@ export function Yape() {
 					indication of the curvature of the trajectory too, through two simple
 					beziér curves.
 				</p>
-				<h3>Inclination and slope</h3>
+				<h4>Inclination and slope</h4>
 				<p>
 					To overcome the tilting of the vehicle when accelerating and stopping,
 					we took inspiration from the artificial horizon present in the
@@ -203,7 +209,7 @@ export function Yape() {
 					to stop when the ascent or descent is too steep for the vehicle's
 					internal capabilities.
 				</p>
-				<h3>Speed and acceleration</h3>
+				<h4>Speed and acceleration</h4>
 				<p>
 					Taking into account the strong distortion given by the wide-angle lens
 					of the main camera, and the low power response capability of the two
@@ -218,7 +224,7 @@ export function Yape() {
 					level of pressure the driver places on the joystick. However, an
 					indication in km/h on the second screen is always present.
 				</p>
-				<h2>Perception of depth and position of the vehicle</h2>
+				<h3>Perception of depth and position of the vehicle</h3>
 				<p>
 					To solve the perception of depth, starting from the concepts found in
 					the research, an integrated indicator cannot be used, as can be for
@@ -226,7 +232,7 @@ export function Yape() {
 					partly exploiting the interactivity of the direction indicators, and
 					partly relying on the display of data received from the lidar sensor.
 				</p>
-				<h3>LIDAR sensors</h3>
+				<h4>LIDAR sensors</h4>
 				<p>
 					the raw data received from the LIDAR and processed by the native
 					software made a too chaotic result, going to frustrate its usefulness,
@@ -234,7 +240,7 @@ export function Yape() {
 					azimuthal view, showing only simple lines defining the perimeters of
 					the closeby elements.
 				</p>
-				<h3>Maps</h3>
+				<h4>Maps</h4>
 				<p>
 					It was therefore decided to use Mapbox, verified its great versatility
 					in the customisation of styles, and its precision due to the support
@@ -244,7 +250,15 @@ export function Yape() {
 					given during driving operations, where concentration must remain to
 					the camera flow and lidars, to avoid any sudden obstacles.
 				</p>
-				<h1>Interface</h1>
+				<h2>Interface prototypes</h2>
+				<p>
+					I know, what is shown in the image and in the video doesn't really
+					look <i>nice</i>. But remember, this is only a proof of concept, based
+					on all the assumptions validated by the wide research, this interface
+					is only temporary, the drone will eventually drive itself, it will be
+					used only for testing purposes, so it's indeed more important that it{' '}
+					<i>works</i> than for it to look pretty.
+				</p>
 			</Par>
 			<Img oneimg='/img/primaryl.jpg' />
 			<Vimeo
@@ -254,9 +268,11 @@ export function Yape() {
 				className='mt-5'
 			/>
 			<Par>
-				<h1>Outcome</h1>
-				Closing this milestone helped the company secure a new set of investors,
-				and collabs all over the world.
+				<h2>Outcome</h2>
+				<p>
+					Closing this milestone helped the company secure a new set of
+					investors, and collabs all over the world.
+				</p>
 				<p>
 					<a
 						href='https://gigalife.vodafone.com/il-postino-5g-yape-robot-postman-delivery/'
@@ -276,6 +292,36 @@ export function Yape() {
 					</a>
 				</p>
 			</Par>
+			<StudiesGrid>
+				<Study
+					img='/img/lidar.jpg'
+					to='yape'
+					type='UX/UI'
+					title='Yape'
+					subtitle='e-Novia'
+				/>
+				<Study
+					img='/cat/lima/4.png'
+					to='lima'
+					type='Waifinding'
+					title='Metro de Lima'
+					subtitle='subway'
+				/>
+				<Study
+					img='https://images-na.ssl-images-amazon.com/images/I/41W1qtcgLDL._AC_SL1000_.jpg'
+					to='yape-srl'
+					type='Corporate'
+					title='Borromeo5'
+					subtitle='A new flavour'
+				/>
+				<Study
+					img='/cat/yape/yape_4.png'
+					to='yape-srl'
+					type='Corporate'
+					title='Yape'
+					subtitle='e-Novia'
+				/>
+			</StudiesGrid>
 		</>
 	);
 }

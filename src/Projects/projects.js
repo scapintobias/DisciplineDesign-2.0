@@ -10,7 +10,6 @@ import {
 	Expo,
 	Corte,
 	Arte,
-	Borromeo,
 	Parole,
 	Svolta,
 	Timeline,
@@ -21,9 +20,7 @@ import {
 	Je,
 	Ducati,
 	Mental,
-	Lima,
 	Yape,
-	YapeSrl,
 } from './content';
 
 const createProject = (title, subtitle, type, year, content) => ({
@@ -35,15 +32,6 @@ const createProject = (title, subtitle, type, year, content) => ({
 });
 
 export const projects = [
-	createProject(
-		'Metro de Lima',
-		'Subway system',
-		'wayfinding',
-		2019,
-
-		Lima()
-	),
-	createProject('Yape SRL', 'e-Novia', 'corporate', 2018, YapeSrl()),
 	createProject(
 		'Mental Coach',
 		'Corporate',
@@ -124,14 +112,7 @@ export const projects = [
 
 		Parole()
 	),
-	createProject(
-		'Borromeo5',
-		'Restaurant',
-		'corporate',
-		2015,
 
-		Borromeo()
-	),
 	createProject(
 		'Corte d’Arte',
 		'Sbacon',

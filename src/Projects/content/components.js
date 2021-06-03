@@ -1,5 +1,43 @@
 import React from 'react';
 import CN from 'classnames';
+import { NavLink } from 'react-router-dom';
+
+export const Study = (props) => {
+	return (
+		<>
+			<NavLink key={props.type} to={'/work/study/' + props.to}>
+				<div className=' hover:text-ruby-400'>
+					<div className='relative h-96'>
+						<img
+							src={props.img}
+							alt='proj'
+							className='object-cover w-full h-full '
+						/>
+					</div>
+					<p className='pt-3 text-sm font-normal uppercase'>{props.type}</p>
+					<p className='py-1 text-4xl font-light'>{props.title}</p>
+					<p className='text-base font-extralight '>{props.subtitle}</p>
+				</div>
+			</NavLink>
+		</>
+	);
+};
+
+export const StudiesGrid = (props) => {
+	return (
+		<>
+			<div className='flex flex-col pb-16 mx-auto max-w-7xl sm:px-6 lg:px-8'>
+				<div className='pb-8'>
+					<p className='text-3xl font-light'>Case Studies</p>
+					<p className='text-lg font-extralight'>selected projects</p>
+				</div>
+				<div className='grid md:grid-cols-2 sm:grid-cols-1 gap-y-16'>
+					{props.children}
+				</div>
+			</div>
+		</>
+	);
+};
 
 export const Main = ({ children }) => (
 	<main className='flex flex-col sm:mt-4 md:mt-6 md:mb-18 sm:mb-24 md:mx-6 sm:mx-4'>

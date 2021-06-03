@@ -5,7 +5,6 @@ export * from './corte';
 export * from './craf';
 export * from './ducati';
 export * from './expo';
-export * from './hospital';
 export * from './ideascudo';
 export * from './jemp';
 export * from './lima';

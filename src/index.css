@@ -33,6 +33,9 @@ body {
 	.h-home {
 		height: calc(100vh - 6.5rem);
 	}
+	.h-study {
+		height: calc(100vh - 4rem);
+	}
 	.col-1 {
 		column-count: 1;
 	}
@@ -44,5 +47,11 @@ body {
 	}
 	.col-4 {
 		column-count: 4;
+	}
+}
+
+@layer base {
+	h1 {
+		font-weight: 400;
 	}
 }

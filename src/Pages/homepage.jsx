@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Homepage = () => (
 	<>
-		<div className='flex flex-col items-center justify-center font-sans font-bold h-home lg:text-7xl md:text-5xl t:text-2xl sm:text-xl text-ruby'>
+		<div className='flex flex-col items-center justify-center font-sans font-bold h-home lg:text-7xl md:text-5xl t:text-2xl sm:text-xl text-ruby-400'>
 			<p className='pb-10'>
 				Visual <span className='font-light'>&</span> Interaction Design
 			</p>

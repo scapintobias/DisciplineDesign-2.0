@@ -1,36 +1,25 @@
 import React from 'react';
 
-import {
-	Main,
-	Par,
-	Sec,
-	ParImg,
-	Iltr,
-	Img,
-	Br,
-	TwoImg,
-	Head,
-	Tit,
-	P,
-	Rf,
-	Pic,
-	Collab,
-	Collapsible,
-	Biblio,
-	ImgRid,
-} from './components';
-//import Vimeo from '@u-wave/react-vimeo';
-
 export function Migrants() {
 	return (
-		<Main>
-			<Img oneimg='/cat/migrants/migrants_1.png' />
+		<>
+			<div className='flex items-center justify-center w-screen h-main'>
+				<img
+					src='/cat/migrants/migrants_1.png'
+					alt='limalogo'
+					className='w-2/3'
+				/>
+			</div>
 
-			<Iltr img='/cat/migrants/migrants_2.png' />
+			<img
+				src='/cat/migrants/migrants_2.png'
+				alt='migrants'
+				className='w-3/6'
+			/>
 
-			<Img oneimg='/cat/migrants/migrants_3.png' />
+			<img src='/cat/migrants/migrants_3.png' alt='migrants' />
 
-			<Img oneimg='/cat/migrants/migrants_4.png' />
-		</Main>
+			<img src='/cat/migrants/migrants_4.png' alt='migrants' />
+		</>
 	);
 }

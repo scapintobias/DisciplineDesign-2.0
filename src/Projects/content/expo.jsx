@@ -1,36 +1,22 @@
 import React from 'react';
 
-import {
-	Main,
-	Par,
-	Sec,
-	ParImg,
-	Iltr,
-	Img,
-	Br,
-	TwoImg,
-	Head,
-	Tit,
-	P,
-	Rf,
-	Pic,
-	Collab,
-	Collapsible,
-	Biblio,
-	ImgRid,
-} from './components';
-//import Vimeo from '@u-wave/react-vimeo';
-
 export function Expo() {
 	return (
-		<Main>
-			<Img oneimg='/cat/expo/expo_1.png' />
+		<>
+			<div className='flex items-center justify-center w-screen h-main'>
+				<img src='/cat/expo/expo_1.png' alt='poster' className='w-11/12 ' />
+			</div>
 
-			<Img oneimg='/cat/expo/expo_2.jpg' className='pb3' />
+			<img src='/cat/expo/expo_2.jpg' alt='expo' />
 
-			<Img oneimg='/cat/expo/expo_3.jpg' className='pb3' />
-
-			<Img oneimg='/cat/expo/expo_4.jpg' />
-		</Main>
+			<img src='/cat/expo/expo_3.jpg' alt='expo' />
+			<div className='relative h-screen'>
+				<img
+					src='/cat/expo/expo_4.jpg'
+					alt='expo'
+					className='object-cover object-bottom w-full h-full'
+				/>
+			</div>
+		</>
 	);
 }
