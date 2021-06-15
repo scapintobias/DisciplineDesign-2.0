@@ -5,7 +5,10 @@ export function Parole() {
 		<>
 			<div className='w-screen h-main'>
 				<div className='flex items-center justify-center w-full h-full'>
-					<p className='font-bold tracking-tighter uppercase futura text-9xl'>
+					<p
+						className='font-black tracking-tighter uppercase futura text-9xl'
+						style={{ letterSpacing: '-0.6rem' }}
+					>
 						parole prigioniere
 					</p>
 					<p className='absolute prose prose-2xl text-charcoal-300 bottom-20'>
